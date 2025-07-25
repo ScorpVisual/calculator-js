@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pixel Tester - Assets</title>
+    <link href="./style.css" type="text/css" rel="stylesheet" />
+     </head>
+  <body>
+    <div class="app-layout">
+      <nav class="sidebar">
+        <div class="sidebar-header">
+          <h2 class="text-primary">Menu</h2>
+        </div>
+ <a href="#" id="start-page" class="nav-link" data-page="home">Start</a>
+        <a href="#" id="check-outfit-page" class="nav-link activated-btn" data-page="check-outfit">Outfit Checker</a>
+        <a href="#" id="check-pet-page" class="nav-link activated-btn" data-page="check-pet">Pet Checker</a>
+        <a href="#" id="check-asset-page" class="nav-link activated-btn" data-page="check-asset" data-active="true">Asset Checker</a>
+        <a href="#" id="check-rules-page" class="nav-link activated-btn" data-page="copy-rules">Regulamin dot. grafik indywidualnych</a>
+      </nav>
+        <main id="content-area" class="content-area min-h-screen flex flex-col justify-start p-4">
+          <!-- standing -->
+          <div class="pixel-background bg-img flex-col justify-center items-center">
+            <h2 class="text-bg">Czy grafika wyświetla się poprawnie?</h2>
+            <div class="row bg-transparent my-3">
+              <div id="asset-display-area" class="flex justify-center flex-wrap gap-4 mb-8 bg-transparent">
+              </div>
+            </div>
+          </div>
+          
+        </main>
+      <div class="sidebar-right">
+        <h3 class="text-xl font-semibold mb-4 text-center section-title">Ładowanie grafiki</h3>
+        <button id="loadImgAsset-button" class="btn my-2">Załaduj asset</button>
+        <div class="bg-buttons">
+          <h2>Sprawdź czy grafika jest widoczna na tłach!</h2>
+          <div class="bg-button btn-grass"></div>
+          <div class="bg-button btn-dirt"></div>
+          <div class="bg-button btn-sand"></div>
+          <div class="bg-button btn-snow"></div>
+          <div class="bg-button btn-rock"></div>
+          <div class="bg-button btn-ice"></div>
+          <div class="bg-button btn-floor"></div>
+          <div class="bg-button btn-bog"></div>
+          <div class="bg-button btn-magmaRock"></div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./renderer.js"></script>
+  </body>
+</html>
+<!-- HELPER
+  <div class="container col">
+      <h1 class="text-primary">Testowanie Motywu</h1>
+      <p class="text-secondary">Ta strona demonstruje użycie wszystkich zdefiniowanych zmiennych kolorów.</p>
+      
+      <hr>
+
+      <h2 class="text-primary">Przyciski</h2>
+      <button class="btn btn-accent">Accent</button>
+      <button class="btn btn-primary">Primary</button>
+      <button class="btn btn-secondary">Secondary</button>
+      <button class="btn btn-transparent">Transparent</button>
+      <button class="btn" disabled>Disabled</button>
+      <p class="text-secondary">Najedź na przyciski (hover) i kliknij je (active), aby zobaczyć efekty.</p>
+      
+      <hr>
+
+      <h2 class="text-primary">Alerty i Statusy</h2>
+      <div class="alert alert-info text-primary">To jest informacja (--info-color).</div>
+      <div class="alert alert-success text-primary">Operacja zakończona sukcesem (--success-color).</div>
+      <div class="alert alert-warning text-primary">Uwaga, ostrzeżenie (--warning-color).</div>
+      <div class="alert alert-danger text-primary">Wystąpił błąd (--danger-color).</div>
+
+      <hr>
+
+      <h2 class="text-primary">Tło i Tekst</h2>
+      <p class="text-primary">
+          To jest tekst podstawowy (text-primary) na tle podstawowym (background-primary).
+          Możesz <span class="highlight">podświetlić</span> fragment tekstu za pomocą --highlight-color.
+      </p>
+      <div class="secondary-panel">
+          <p class="text-primary">Ten panel używa tła drugorzędnego (--background-secondary) dla kontrastu.</p>
+          <p class="text-secondary">A to jest tekst drugorzędny, mniej ważny (--text-secondary).</p>
+      </div>
+  </div> -->

@@ -1,19 +1,21 @@
 {
-  "name": "calculator-js",
-  "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "name": "pixel-tester",
+  "version": "0.1.0",
+  "description": "Simple app for testing resources.",
   "main": "./src/main.js",
-  "author": "example.com",
-  "homepage": "https://www.electronjs.org",
-  "scripts": {
-    "format": "prettier --write .",
-    "lint": "eslint --ext .js .",
-    "dev": "electron .",
-    "postinstall": "electron-builder install-app-deps",
-    "build:win": "electron-builder --win --config",
-    "build:mac": "electron-builder --mac --config",
-    "build:linux": "electron-builder --linux --config"
-  },
+  "author": "Marcel Czowalla (Lordz)",
+  "license": "private",
+"scripts": {
+  "format": "prettier --write .",
+  "lint": "eslint --ext .js .",
+  "dev": "electron .",
+  "postinstall": "electron-builder install-app-deps",
+  "build:win": "electron-builder --win --config",
+  "build:mac": "electron-builder --mac --config",
+  "build:linux": "electron-builder --linux --config",
+  "dist": "electron-builder --win"
+},
+
   "dependencies": {
     "@electron-toolkit/preload": "^2.0.0",
     "@electron-toolkit/utils": "^2.0.0"
@@ -25,5 +27,16 @@
     "electron-builder": "^24.6.3",
     "eslint": "^8.47.0",
     "prettier": "^3.0.2"
-  }
+  },
+"build": {
+  "extraResources": [
+    {
+      "from": "src/img",
+      "to": "img",
+      "filter": ["**/*"]
+    }
+  ]
+}
+
+
 }

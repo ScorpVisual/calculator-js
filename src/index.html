@@ -1,53 +1,102 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Calculator Vanilla</title>
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-inline'"
-    />
-
+    <title>Pixel Tester - Start</title>
     <link href="./style.css" type="text/css" rel="stylesheet" />
-    <script type="module" src="./renderer.js"></script>
-  </head>
-
+    </head>
   <body>
-    <div class="container">
-      <div class="result-container">
-        <span class="result"></span>
-      </div>
-      <div class="row">
-        <button data-value="C">C</button>
-        <button data-value="%">%</button>
-        <button data-value="Backspace">&#x021D0;</button>
-        <button data-value="/">/</button>
-      </div>
-      <div class="row">
-        <button data-value="7">7</button>
-        <button data-value="8">8</button>
-        <button data-value="9">9</button>
-        <button data-value="*">*</button>
-      </div>
-      <div class="row">
-        <button data-value="4">4</button>
-        <button data-value="5">5</button>
-        <button data-value="6">6</button>
-        <button data-value="+">+</button>
-      </div>
-      <div class="row">
-        <button data-value="1">1</button>
-        <button data-value="2">2</button>
-        <button data-value="3">3</button>
-        <button data-value="-">-</button>
-      </div>
-      <div class="row">
-        <button data-value="**">**</button>
-        <button data-value="0">0</button>
-        <button data-value=".">.</button>
-        <button data-value="=">=</button>
-      </div>
-    </div>
+    <div class="app-layout">
+      <nav class="sidebar">
+        <div class="sidebar-header">
+          <h2 class="text-primary">Menu</h2>
+        </div>
+        <a href="#" id="start-page" class="nav-link activated-btn" data-page="home" data-active="true">Start</a>
+        <a href="#" id="check-outfit-page" class="nav-link activated-btn" data-page="check-outfit">Outfit Checker</a>
+        <a href="#" id="check-pet-page" class="nav-link activated-btn" data-page="check-pet">Pet Checker</a>
+        <a href="#" id="check-asset-page" class="nav-link activated-btn" data-page="check-asset">Asset Checker</a>
+        <a href="#" id="check-rules-page" class="nav-link activated-btn" data-page="copy-rules">Regulamin dot. grafik indywidualnych</a>
+      </nav>
+        <main>
+          <h1>Instrukcje do apki</h1>
+          <p class="tutorial-p">Prosta apka służąca do testowania grafiki. Ma na celu usprawnić weryfikację wyświetlania grafik,
+            bez konieczności przechodzenia przez proces wgrywania wszystkiego na serwer.
+
+            <br><br> Docelowo i tak trzeba wszystko sprawdzać w grze, ale pierwsza weryfikacja pójdzie szybciej poprzez aplikację.
+          </p>
+          <p class="tutorial-p">
+            Ponadto, narzędzie ma wspomagać pracę przy weryfikacji grafik indywidualnych - outów i petów. 
+            Integracja z regulaminem ma na celu przyspieszenie wrzucania feedbacku graczom.
+          </p>
+          <h2>Sposób użycia aplikacji</h2>
+          <h3>Wgrywanie strojów - Outfit Checker</h3>
+          <p class="tutorial-p">
+            Ważne: outfity o niestandardowych rozmiarach (np. gość w łódce) testujemy jako peta. Outfity mają na sztywno ustawiony rozmiar klatki, żeby sprawdzić, czy stroje graczy mają właściwy rozmiar.
+          </p>
+          <img class="tutorial-img" data-name="tutorial/tutorial-out.jpg" alt="">
+          <h3>Wgrywanie petów - Pet Checker</h3>
+
+          <img class="tutorial-img" data-name="tutorial/tutorial-pet.jpg" alt="">
+          <h3>Wgrywanie assetów - Asset Checker</h3>
+          <img class="tutorial-img" data-name="tutorial/tutorial-asset.jpg" alt="">
+          <h3>Kopiowanie pktów regulaminu - Regulamin dot. grafik indywidualnych</h3>
+          <img class="tutorial-img" data-name="tutorial/tutorial-rules-1.jpg" alt="">
+          <h3>Szablony odpowiedzi</h3>
+          <p class="tutorial-p">
+            Możemy łatwo przygotować sobie odpowiedź:
+            <ol>
+            <li>Aktywujemy szablon klikając przycisk w prawym menu.</li>
+            <li>Kopiujemy zapis regulaminu klikając na niego.</li>
+            <li>W schowku mamy gotową odpowiedź - wystarczy użyć <span class="rule-nr-highlight">CTRL+V</span>!</li>
+            </ol>
+          </p>
+          <img class="tutorial-img" data-name="tutorial/tutorial-rules-2.jpg" alt="">
+        </main>
+    <script type="module" src="./renderer.js"></script>
+
   </body>
 </html>
+
+
+
+
+
+
+
+
+<!-- HELPER
+  <div class="container col">
+      <h1 class="text-primary">Testowanie Motywu</h1>
+      <p class="text-secondary">Ta strona demonstruje użycie wszystkich zdefiniowanych zmiennych kolorów.</p>
+      
+      <hr>
+
+      <h2 class="text-primary">Przyciski</h2>
+      <button class="btn btn-accent">Accent</button>
+      <button class="btn btn-primary">Primary</button>
+      <button class="btn btn-secondary">Secondary</button>
+      <button class="btn btn-transparent">Transparent</button>
+      <button class="btn" disabled>Disabled</button>
+      <p class="text-secondary">Najedź na przyciski (hover) i kliknij je (active), aby zobaczyć efekty.</p>
+      
+      <hr>
+
+      <h2 class="text-primary">Alerty i Statusy</h2>
+      <div class="alert alert-info text-primary">To jest informacja (--info-color).</div>
+      <div class="alert alert-success text-primary">Operacja zakończona sukcesem (--success-color).</div>
+      <div class="alert alert-warning text-primary">Uwaga, ostrzeżenie (--warning-color).</div>
+      <div class="alert alert-danger text-primary">Wystąpił błąd (--danger-color).</div>
+
+      <hr>
+
+      <h2 class="text-primary">Tło i Tekst</h2>
+      <p class="text-primary">
+          To jest tekst podstawowy (text-primary) na tle podstawowym (background-primary).
+          Możesz <span class="highlight">podświetlić</span> fragment tekstu za pomocą --highlight-color.
+      </p>
+      <div class="secondary-panel">
+          <p class="text-primary">Ten panel używa tła drugorzędnego (--background-secondary) dla kontrastu.</p>
+          <p class="text-secondary">A to jest tekst drugorzędny, mniej ważny (--text-secondary).</p>
+      </div>
+  </div> -->
+
